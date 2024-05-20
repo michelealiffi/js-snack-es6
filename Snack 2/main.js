@@ -16,9 +16,6 @@ const teams = [
 console.log(teams);
 
 const teamsModificato = teams.map((element, index, arr) => {
-    //puntiFatti = Math.floor(Math.random());
-    //falliSubiti = Math.floor(Math.random());
-
     return {
         nome: element.nome,
         puntiFatti: element.puntiFatti,
@@ -29,6 +26,9 @@ const teamsModificato = teams.map((element, index, arr) => {
 console.log(teamsModificato);
 
 const result = teamsModificato.map((element) => {
+    element.puntiFatti = Math.floor(Math.random()*100)
+    element.falliSubiti = Math.floor(Math.random()*100)
+    
     return {
         nome: element.nome,
         falliSubiti: element.falliSubiti,
